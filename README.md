@@ -7,6 +7,7 @@
 <h3> Qompass AI on Odyssey </h3>
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-odyssey)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/odyssey/total?style=flat-square)
   <a href="https://arxiv.org/list/cs.AI/recent">
   <img src="https://img.shields.io/badge/AI_Research-4B8BBE?style=for-the-badge&logo=openai&logoColor=white" alt="AI Research">
 </a>
