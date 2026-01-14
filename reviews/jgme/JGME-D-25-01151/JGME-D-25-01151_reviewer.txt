@@ -1,0 +1,786 @@
+                           Journal of Graduate Medical Education
+Algorithmic Scheduling to Improve Resident Well-Being and Equity in Call Distribution
+                                                --Manuscript Draft--
+
+Manuscript Number:                    JGME-D-25-01151
+
+Full Title:                           Algorithmic Scheduling to Improve Resident Well-Being and Equity in Call Distribution
+
+Short Title:
+
+Article Type:                         Educational Innovation
+
+Keywords:
+
+Abstract:                             Background
+
+                                      Call schedules balance resident well being, staffing requirements, and compliance with
+                                      Accreditation Council for Graduate Medical Education (ACGME) guidelines. Manual
+                                      scheduling is time-intensive and can contribute to inequitable workload distribution and
+                                      resident dissatisfaction.
+
+                                      Objective
+
+                                      To develop and evaluate a constraint-based scheduling algorithm designed to improve
+                                      fairness and efficiency in call distribution within a psychiatry residency program.
+
+                                      Methods
+
+                                      A Python-based tool using Google OR-Tools CP-SAT generated the call schedule
+                                      using hard and soft constraints. Hard constraints defined holidays, PTO, and post-call
+                                      rest; soft constraints optimized fairness, spacing, didactic protection, and personal
+                                      “non-call” requests. Fairness was assessed by Gini coefficients and temporal Gini
+                                      indices stratified by postgraduate year (PGY). The study was conducted during the
+                                      2025-2026 academic year.
+
+                                      Results
+
+                                      Automation reduced inequality and improved schedule regularity. For PGY-2 mean
+                                      Gini decreased from 0.042 to 0.012 (Δ −0.031; 95% CI −0.056 to −0.009) and temporal
+                                      Gini from 0.380 to 0.321 (Δ −0.059; 95% CI −0.081 to −0.039). For PGY-3 Gini
+                                      decreased from 0.110 to 0.037 (Δ −0.073; 95% CI −0.096 to −0.049) and temporal Gini
+                                      from 0.415 to 0.353 (Δ −0.062; 95% CI −0.111 to −0.014). Scheduling time decreased
+                                      fromby factor of ~10. Resident surveys (Nresponses-rate ~55%) showed higher
+                                      satisfaction with fairness (+19 percentage points), and reduced reports of feeling
+                                      overwhelmed (+19 percentage points).
+
+                                      Conclusions
+
+                                      The new program produced a more optimized and equitable call distribution in a
+                                      psychiatry residency. This approach can be adopted by other programs and aligns with
+                                      resident well-being, protecting didactic time, and systems-based practice goals.
+
+
+
+
+                 Powered by Editorial Manager® and ProduXion Manager® from Aries Systems Corporation
+Cover Letter
+
+
+
+
+               Algorithmic Scheduling to Improve Resident
+               Well‑Being and Equity in Call Distribution
+               Lukas Kuhnel*, MD; Matthew Mitchell*, MD; Karishma Kothari*, MD; Jade Parker*, MD;
+               Andrea Waxman**, MD
+               University of Arizona College of Medicine – Phoenix, Department of Psychiatry, and Banner –
+               University Medical Center Phoenix, Phoenix, Arizona, USA
+
+               *Resident
+               **Program Director
+
+
+               Corresponding Author:
+
+               Lukas Kuhnel
+               Psychiatry – PGY-3
+               University of Arizona – Phoenix
+               Phone: +1 (480)-257-0993
+               Email: Lukas.Kuhnel@bannerhealth.com
+
+               Work Counts
+               Abstract: 247
+               Manuscript: 1303 (including tables)
+Manuscript File                                                 Click here to access/download;Manuscript File;JGME_Paper
+                                                                Final.docx
+
+   1
+   2
+   3
+   4
+   5
+   6
+   7              Algorithmic Scheduling to Improve Resident Well‑ Being and Equity in Call
+   8
+   9
+                  Distribution
+  10              Lukas Kuhnel*, MD; Matthew Mitchell*, MD; Karishma Kothari*, MD; Jade Parker*,
+  11              MD; Andrea Waxman**, MD
+  12
+  13              University of Arizona College of Medicine – Phoenix, Department of Psychiatry, and Banner –
+  14              University Medical Center Phoenix, Phoenix, Arizona, USA
+  15
+  16              *Resident
+  17              **Program Director
+  18
+  19
+  20
+  21              Corresponding Author:
+  22
+  23              Lukas Kuhnel
+  24              Psychiatry – PGY-3
+  25
+  26              University of Arizona – Phoenix
+  27              Phone: +1 (480)-257-0993
+  28              Email: Lukas.Kuhnel@bannerhealth.com
+  29
+  30
+  31              Work Counts
+  32              Abstract: 247
+  33
+  34
+                  Manuscript: 1350 (including tables)
+  35
+  36
+  37
+  38
+  39
+  40
+  41
+  42
+  43
+  44
+  45
+  46
+  47
+  48
+  49
+  50
+  51
+  52
+  53
+  54
+  55
+  56
+  57
+  58
+  59
+  60
+  61
+  62
+  63
+  64
+  65
+ 1
+ 2
+ 3
+ 4
+ 5   Algorithmic Scheduling to Improve Resident Well‑Being and Equity in Call
+ 6   Distribution
+ 7
+ 8   Lukas Kuhnel*, MD; Matthew Mitchell*, MD; Karishma Kothari*, MD; Jade Parker*,
+ 9   MD; Andrea Waxman**, MD
+10
+     University of Arizona College of Medicine – Phoenix, Department of Psychiatry, and Banner –
+11
+12   University Medical Center Phoenix, Phoenix, Arizona, USA
+13
+14
+15   Abstract
+16
+17   Background: Call schedules balance resident well being, staffing requirements, and
+18   compliance with Accreditation Council for Graduate Medical Education (ACGME) guidelines.
+19
+20
+     Manual scheduling is time‑intensive and can contribute to inequitable workload
+21   distribution and resident dissatisfaction.
+22
+23   Objective: To develop and evaluate a constraint‑based scheduling algorithm designed to
+24   improve fairness and efficiency in call distribution within a psychiatry residency program.
+25
+26
+27
+     Methods: A Python‑based tool using Google OR‑Tools CP‑SAT generated the call schedule
+28   using hard and soft constraints. Hard constraints defined holidays, PTO, and post‑call rest;
+29   soft constraints optimized fairness, spacing, didactic protection, and personal “non-call”
+30
+     requests. Fairness was assessed by Gini coefficients and temporal Gini indices stratified by
+31
+32   postgraduate year (PGY). The study was conducted during the 2025-2026 academic year
+33   and deemed IRB exempt.
+34
+35   Results: Automation reduced inequality and improved schedule regularity. For PGY-2 mean
+36
+37   Gini decreased from 0.042 to 0.012 (Δ −0.031; 95% CI −0.056 to −0.009) and temporal Gini
+38   from 0.380 to 0.321 (Δ −0.059; 95% CI −0.081 to −0.039). For PGY-3 Gini decreased from
+39   0.110 to 0.037 (Δ −0.073; 95% CI −0.096 to −0.049) and temporal Gini from 0.415 to 0.353
+40
+41
+     (Δ −0.062; 95% CI −0.111 to −0.014). Scheduling time decreased fromby factor of
+42   ~10. Resident surveys (Nresponses-rate ~55%) showed higher satisfaction with fairness
+43   (+19 percentage points), and reduced reports of feeling overwhelmed (+19 percentage
+44
+     points).
+45
+46
+47   Conclusions: The new program produced a more optimized and equitable call distribution
+48   in a psychiatry residency. This approach can be adopted by other programs and aligns with
+49   resident well‑being, protecting didactic time, and systems‑based practice goals.
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7   Algorithmic Scheduling to Improve Resident Well‑Being and Equity in Call
+ 8
+ 9
+     Distribution
+10   Lukas Kuhnel*, MD; Matthew Mitchell*, MD; Karishma Kothari*, MD; Jade Parker*,
+11   MD; Andrea Waxman**, MD
+12
+13   University of Arizona College of Medicine – Phoenix, Department of Psychiatry, and Banner –
+14   University Medical Center Phoenix, Phoenix, Arizona, USA
+15
+16
+17
+18
+     Manuscript
+19
+20
+21   Introduction
+22
+23   Residency call scheduling is a recurring and time‑intensive administrative task that directly
+24
+25   affects workload equity, resident well‑being, and program operations. Call schedules
+26
+27
+     balance resident well being, staffing requirements, and compliance with Accreditation
+28
+29
+30   Council for Graduate Medical Education (ACGME) guidelines. Manual scheduling methods
+31
+32   rely on iterative spreadsheet adjustments and can lead to unequal call distributions,
+33
+34   inconsistent spacing between shifts, and scheduling fatigue for the chief resident or call
+35
+36
+37
+     committee. Algorithmic scheduling, while common in operations research, has rarely been
+38
+39   applied within graduate medical education (GME) or psychiatry. To address these
+40
+41   challenges, we developed and implemented a constraint‑based scheduling software and
+42
+43   compared it to the gold-standard (manual scheduling) using a quality improvement
+44
+45
+46   approach.
+47
+48
+49
+50   Methods
+51
+52   The scheduling program was implemented using Google OR‑Tools CP‑SAT, a mixed‑integer
+53
+54   optimization solver for constraint‑satisfaction problems. Each resident‑day pairing was
+55
+56   represented as a binary decision variable, and the solver identified feasible solutions that
+57
+58
+59   satisfied all hard constraints while minimizing weighted penalties for soft preferences.
+60
+61
+62
+                                                                                                    1
+63
+64
+65
+ 1
+ 2
+ 3
+ 4   Hard‑coded rules defined PGY eligibility, duty caps, and post‑call rest. Soft optimization
+ 5
+ 6
+ 7   objectives promoted fairness and temporal spacing by minimizing inequality, maximizing
+ 8
+ 9   inter‑call gaps, respecting didactic and non‑call requests, and minimizing repeated
+10
+11   call‑backup pairings. The resulting integer program typically solved to optimality or
+12
+13
+     near‑optimality within minutes for each ~4‑month block with 3 blocks composing a full
+14
+15
+16   academic year. A summary of constraints and optimization logic is shown in Table 1. The
+17
+18   new schedule created by the software was compared to previous year's schedule, which
+19
+20   was constructed manually with Microsoft Excel using the same 3 block method. The Gini
+21
+22
+23   and Temporal Gini stratified by PGY level were used to objectively compare the two
+24
+25   schedules. To assess subjective perceptions of fairness and well-being, anonymous pre- and
+26
+27   post-implementation surveys were distributed electronically to all residents (maximum N ≈
+28
+29   24 per year). Surveys included seven 5-point Likert items evaluating perceived fairness,
+30
+31
+32   balance, stress, flexibility, and overall well-being, with optional free-text comments.
+33
+34   Response rates were 50% (12/24) pre-implementation and 59% (13/22) post-
+35
+36   implementation. This study was conducted mainly during the 2025-2026 academic
+37
+38
+39
+     year. The Algorithm-based call schedule project including the distribution of anonymous
+40
+41   pre- and post-implementation surveys to psychiatry residents was determined to be
+42
+43   exempt from human subject’s research per institutional IRB review. No patient data was
+44
+45   used, and no identifiable resident information was collected.
+46
+47
+48
+49
+50
+51
+52    Category                                        Core Logic
+53                                                    PGY‑ specific eligibility by day type; one call
+54                                                    and one backup per day (no overlap); PTO
+55    Hard‑ coded rules
+                                                      and holiday exclusions; rest protection after
+56
+57                                                    call.
+58                                                    Minimize inequality across residents (Gini
+59    Soft optimization goals                         objective); maximize spacing between call
+60                                                    shifts (temporal Gini objective); respect
+61
+62
+                                                                                                        2
+63
+64
+65
+ 1
+ 2
+ 3
+ 4                                                non‑ call and didactic requests when feasible;
+ 5
+ 6                                                minimize repeated call‑ backup pairings;
+ 7                                                maintain balanced workload across blocks.
+ 8                                                Optimize PGY-2 “Golden weekends”.
+ 9                                                Mixed‑ integer constraint satisfaction model
+10                                                solved via OR‑ Tools CP‑ SAT; objective
+11
+12
+      Mathematical framework                      function minimizes weighted penalties for
+13                                                fairness and spacing while ensuring all hard
+14                                                constraints are met.
+15   Table 1. Summary of Scheduling Logic and Optimization Framework
+16
+17
+18
+19   Results
+20   Implementation of the new scheduling software produced consistent improvements in
+21
+22
+23   fairness and call spacing across most PGY years (Table 2). Among primary call residents
+24
+25   (PGY‑2 and PGY‑3), mean Gini coefficients decreased by 0.03–0.07 and temporal Gini
+26
+27   indices by 0.05–0.06, representing a 25–35 % relative improvement in equity. PGY‑4
+28
+29   coverage also became more evenly distributed (Δ temporal = −0.08). PGY‑1 intern
+30
+31
+32   assignments remained balanced. Confidence intervals showed consistent improvement
+33
+34   across the main call tiers despite a small sample size skewing formal statistical testing.
+35
+36
+37                              2024–        2025–        Δ Mean (New–
+38    PGY     Metric                                                     95 % CI for Δ
+                                2025 Mean 2026 Mean Old)
+39
+40    1       Gini              0.069        0.052        −0.017         (−0.030 → −0.005)
+41    2       Gini              0.042        0.012        −0.031         (−0.056 → −0.009)
+42    3       Gini              0.110        0.037        −0.073         (−0.096 → −0.049)
+43    4       Gini              0.019        0.006        −0.013         (−0.038 → 0.000)
+44
+45
+      1       Temporal Gini     0.430        0.371        −0.059         (−0.109 → −0.008)
+46    2       Temporal Gini     0.380        0.321        −0.059         (−0.081 → −0.039)
+47    3       Temporal Gini     0.415        0.353        −0.062         (−0.111 → −0.014)
+48    4       Temporal Gini     0.372        0.289        −0.083         (−0.083 → −0.083)
+49   Table 2. Fairness Metrics Before and After Automated Scheduling Implementation
+50
+51
+52   Pre- and post-implementation surveys demonstrated consistent improvements in residents’
+53
+54   perceptions of fairness and workload balance following automation. Satisfaction with
+55
+56   fairness increased from 50% to 69%, and the proportion rating the distribution of calls as
+57
+58
+     balanced or very balanced rose from 50% to 77%. Reports of being rarely or never
+59
+60
+61
+62
+                                                                                                   3
+63
+64
+65
+ 1
+ 2
+ 3
+ 4   overwhelmed increased from 50% to 69%, and ease of swapping calls improved from 42%
+ 5
+ 6
+ 7   to 62%. Perceptions of schedule support for well-being and communication clarity
+ 8
+ 9   remained stable at moderate-to-high levels. These findings align with objective fairness
+10
+11   metrics, indicating that algorithmic scheduling improved both quantitative equity and
+12
+13
+     perceived manageability.
+14
+15
+16
+17                                         “Positive”
+                                                                  Pre (n =     Post (n =
+18    Q#      Domain                       Responses                                        Δ (pp)
+                                                                  12)          13)
+19                                         (Definition)
+20                                         Satisfied + Very
+21    Q1      Satisfaction with fairness                          50%          69%          +19
+                                           Satisfied
+22
+23             Schedule accommodated
+      Q2                                   Well + Very Well      75%        69%             −6
+24             personal needs
+25             Distribution of calls       Balanced + Very
+26    Q3                                                         50%        77%             +27
+               balanced                    Balanced
+27
+      Q4       Felt overwhelmed            Never + Rarely        50%        69%             +19
+28
+29    Q5       Ease of swapping calls      Easy + Very Easy      42%        62%             +20
+30             Schedule supported well-
+      Q6                                   Well + Very Well      42%        46%             +4
+31             being
+32             Conflicts or
+33    Q7                                   Never + Rarely        67%        77%             +10
+34             misunderstandings
+35   Δ = post – pre (percentage-point difference).
+36   Table 3. Resident perception of call schedule pre- vs post-implementation
+37
+38
+39   Lastly, the new software reduced schedule-building time from approximately 30 hours per
+40
+41   block (manual) to less than 3 hours. Because the algorithm automatically applied all eligibility
+42
+43   and fairness constraints, the call committee could focus on higher-level review rather than
+44
+45
+46   manual troubleshooting. Program leadership also noted that the generated schedules were
+47
+48   easier to audit, as summary statistics on fairness and spacing were automatically available
+49
+50   for review, supporting transparent oversight and rapid approval.
+51
+52
+53
+54
+55   Discussion
+56   This project demonstrates that a constraint‑based, algorithmic approach can produce more
+57
+58
+59
+     equitable and temporally balanced call schedules than manual construction. The integration
+60
+61
+62
+                                                                                                     4
+63
+64
+65
+ 1
+ 2
+ 3
+ 4   of hard‑coded eligibility and rest rules with fairness‑oriented optimization objectives allows
+ 5
+ 6
+ 7   the system to out preform an average scheduler by finding optimized solutions that a
+ 8
+ 9   manual approach would struggle to identify in any reasonable timely manner while also
+10
+11   removing subjective bias. Due to the small sample size available, formal statistical testing
+12
+13
+     was limited, but confidence intervals still showed consistent and significant improvement in
+14
+15
+16   call equity for PGY-1 to PGY-3. The PGY-4 year has the smallest number of calls and hence
+17
+18   the smallest sample size which likely led to the less significant results seen.
+19
+20
+21   Resident survey findings mostly supported these objective improvements, showing parallel
+22
+23
+     improvement in perceived fairness, call balance, and reduced stress. The largest
+24
+25
+26   improvements in survey results occurred in perceived fairness and balanced call
+27
+28   distribution, which is reflected by the more objective improvement in both Gini and
+29
+30   Temporal Gini. Fairness and more optimized temporal spread of call likely led to decreased
+31
+32
+33   reports of feeling overwhelmed by the call scheduled. The ease of call switching was also
+34
+35   drastically improved per the survey results. Call switching was difficult in the past due to
+36
+37   the rigid spacing and post call rest requirements between call and back-up call shifts. Call
+38
+39   switching likely became more accessible again due to more optimized temporal spread of
+40
+41
+42   assignments. Interestingly, the survey results showed a small decrease in satisfaction
+43
+44   regarding the new software’s ability to address personal needs. Increasing fairness and
+45
+46   accommodating the ability to switch shifts more freely should have allowed personal needs
+47
+48
+     to be better addressed, but the survey results disagree with this assumption. When
+49
+50
+51   constructed manually the individual creating the schedule would likely have various
+52
+53   informal personal pieces of information about their co-residents, this is information that the
+54
+55   new software does not have access to outside of formally requested PTO and non-call
+56
+57
+58   requests which can possibly explain the decreased survey results in this category.
+59
+60
+61
+62
+                                                                                                    5
+63
+64
+65
+ 1
+ 2
+ 3
+ 4   Nonetheless, together the quantitative and qualitative findings overall suggest that the new
+ 5
+ 6
+ 7   scheduling software enhanced both measurable equity and subjective resident well-being.
+ 8
+ 9   Beyond fairness, the new software-based approach streamlined administrative workload,
+10
+11   allowing schedulers and leadership to focus on educational and well-being considerations
+12
+13
+     rather than manual data reconciliation.
+14
+15
+16
+17
+18   Conclusion
+19
+20   A constraint‑based algorithmic scheduling program produced a more optimized and
+21
+22   equitable call distribution with substantially less administrative effort in a psychiatry
+23
+24   residency. This practical innovation is feasible for adoption by other programs and aligns
+25
+26   with resident well‑being, protecting didactic time, and systems‑based practice goals.
+27
+28
+29
+30
+31   References
+32
+33   1. Google OR‑Tools. Google Optimization Tools Documentation. Accessed October 2025.
+34
+35       https://developers.google.com/optimization
+36
+37   2. Ballard TNS, Grenda TR, Cohn AM, Daskin MS, Seagull FJ, Reddy RM. Innovative
+38
+39       Scheduling Solutions for Graduate Medical Education. J Grad Med Educ. 2015;7(2):169-
+40
+41
+42       170. doi:10.4300/JGME-D-14-00581.1.
+43
+44   3. Howard FM, Gao CA, Sankey C. Implementation of an automated scheduling tool
+45
+46       improves schedule quality and resident satisfaction. PLoS One. 2020;15(8):e0236952.
+47
+48
+         doi:10.1371/journal.pone.0236952
+49
+50
+51   4. Ceriani L, Verme P. The origins of the Gini index: Extracts from
+52
+53       Variabilità e Mutabilità (1912) by Corrado Gini. J Econ Inequal. 2012;10:421‑443.
+54
+55
+56
+57
+58
+59
+60
+61
+62
+                                                                                                  6
+63
+64
+65
+ 1
+ 2
+ 3
+ 4
+ 5   Acknowledgments, Funding, and Disclosures
+ 6   Acknowledgments: The authors thank the psychiatry residents at the University of Arizona
+ 7
+ 8   College of Medicine – Phoenix and Banner – University Medical Center Phoenix for their
+ 9
+10
+11   participation and feedback during this project.
+12
+13   Funding/Support: None reported.
+14
+15   Conflicts of Interest: The authors declare no conflicts of interest.
+16
+17
+18
+19
+20   Author Contributions:
+21
+22
+23   Dr. Kuhnel led project design, algorithm development, and data analysis as the current PGY-
+24
+25   3 call committee representative.
+26
+27   Dr. Mitchell constructed the prior manual schedules and contributed comparative data and
+28
+29
+30
+     manuscript revision as the previous PGY-3 call committee representative
+31
+32   Dr. Kothari assisted with survey development, data collection, and resident engagement.
+33
+34   Dr. Parker assisted with survey development, data collection, and resident engagement.
+35
+36   Dr. Waxman provided call schedule oversight, interpretation of findings, and final call
+37
+38
+39   schedule approval as Program Director.
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+                                                                                                7
+63
+64
+65
+Table1   Click here to access/download;Figure;JGME Table1.png
+Table2   Click here to access/download;Figure;JGME Table2.png
+Table3   Click here to access/download;Figure;JGME Table3.png
+IRB Review                                                Click here to access/download;Supplemental
+                                                          Material;Correspondence_for_STUDY00007386.pdf
+
+                                                                                 University of Arizona IRB
+                                                                               845 N Park Ave., Suite 537A
+                                                                                        Tucson, AZ 85719
+                                                                                        Fax: 520-621-9810
+                                                                                    VPR-IRB@arizona.edu
+
+
+
+
+                                           NOT HUMAN RESEARCH
+
+             December 15, 2025
+
+             Lukas Kuhnel
+
+             Dear Lukas Kuhnel:
+
+             On 12/12/2025, the IRB reviewed the following submission:
+
+                            Type of Review: Initial Study
+                                       Title: Algorithmic Scheduling to Improve Resident
+                                              Well‑Being and Equity in Call Distribution
+                                Investigator: Lukas Kuhnel
+                         IRB Submission ID: STUDY00007386
+                                   Sponsor: None
+                             Prime Sponsor: None
+                          IND, IDE, or HDE: None
+                        Documents Reviewed: • Advisor Approval, Category: Other;
+                                              • Data Elements, Category: Other;
+                                              • IRB Exemption Form, Category: IRB Protocol;
+
+
+             The IRB determined that the proposed activity is not research involving human subjects
+             as defined by DHHS and FDA regulations.
+
+             IRB review and approval by this organization is not required. This determination applies
+             only to the activities described in the IRB submission and does not apply should any
+             changes be made. If changes are made and there are questions about whether these
+             activities are research involving humans in which the organization is engaged, please
+             submit a new request to the IRB for a determination.
+
+             All Covered Individuals must disclose all sponsored and non-sponsored Research
+             Projects to the Office for Responsible Outside Interests (OROI) prior to Conducting
+             Research if the individual is an Investigator. Please visit the OROI website for more
+             information.
+
+
+
+
+                                                    Page 1 of 2
+                                                                    University of Arizona IRB
+                                                                  845 N Park Ave., Suite 537A
+                                                                           Tucson, AZ 85719
+                                                                           Fax: 520-621-9810
+                                                                       VPR-IRB@arizona.edu
+
+We value your feedback and would appreciate you taking the time to complete our survey
+about your experience with the IRB staff:
+https://uarizona.co1.qualtrics.com/jfe/form/SV_ehQ04WxNA06b42i.
+
+If questions arise at any time during your study, please email the general IRB inbox at
+VPR-IRB@arizona.edu.
+
+
+
+
+                                       Page 2 of 2
+
