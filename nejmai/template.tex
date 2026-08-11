@@ -1,0 +1,202 @@
+% #################################################################
+% /qompassai/.GH/Qompass/Odyssey/nejmai/template.tex
+% Qompass AI Template
+% SPDX-License-Identifier: Apache-2.0
+% Copyright (c) 2026 Qompass AI
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at:
+%   http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+% #################################################################
+
+% template.tex
+% NEJM AI manuscript draft template
+% Complete the Manuscript Central fields separately after compiling this draft.
+% Title limit shown in the submission portal: 50 words.
+% Abstract limit shown in the submission portal: 450 words.
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={NEJM AI Manuscript Draft}
+}
+
+\onehalfspacing
+\setlist{nosep}
+
+% -----------------------------------------------------------------------------
+% Submission metadata -- replace all bracketed placeholders.
+% -----------------------------------------------------------------------------
+\newcommand{\ManuscriptType}{Datasets, Benchmarks, and Protocols}
+% Other portal choices: Original Article; Review; Case Study; Perspective;
+% Policy Corner.
+\newcommand{\ManuscriptTitle}{[Concise manuscript title: 50 words or fewer]}
+\newcommand{\ShortTitle}{[Short running title]}
+\newcommand{\CorrespondingAuthor}{[Name, degree]}
+\newcommand{\CorrespondingEmail}{[email@example.org]}
+\newcommand{\ArticleDescription}{[One- or two-sentence description for Manuscript Central.]}
+\newcommand{\WritingAssistance}{[State who wrote the first draft; identify any paid writing assistance; disclose authoring AI, machine-learning, or large-language-model use, if applicable.]}
+
+\title{\ManuscriptTitle}
+\author{
+  [First Author, Degree]\thanks{[Department, institution, city, state/province, country.]} \
+  \and
+  [Second Author, Degree]\thanks{[Department, institution, city, state/province, country.]} \\
+  \texttt{Correspondence: \CorrespondingAuthor; \CorrespondingEmail}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Manuscript type:} \ManuscriptType
+
+\begin{abstract}
+	% Keep this abstract at or below 450 words for the submission portal.
+	\textbf{Background:} [State the clinical or methodological problem.]\\
+	\textbf{Methods:} [Describe the dataset, benchmark, protocol, cohorts, data sources, task definition, and evaluation approach.]\\
+	\textbf{Results:} [Summarize dataset scale, baseline performance, key findings, and availability.]\\
+	\textbf{Conclusions:} [State the principal contribution and intended use.]
+\end{abstract}
+
+\noindent\textbf{Keywords:} [3--8 keywords]
+
+\section{Introduction}
+Describe the clinical need, technical gap, and the purpose of this work. State the intended users and the decisions, workflows, or research questions the resource supports.
+
+\section{Methods}
+
+\subsection{Study Design and Objectives}
+Define the dataset, benchmark, or protocol and prespecify the primary objectives, task definitions, and evaluation criteria.
+
+\subsection{Data Sources and Cohort Construction}
+Describe data provenance, eligibility criteria, collection dates, sites, sampling, inclusion and exclusion criteria, and dataset splits.
+
+\subsection{Data Processing and Annotation}
+Document preprocessing, deidentification, label definitions, annotation workflow, annotator expertise, quality-control procedures, and adjudication.
+
+\subsection{Benchmark Tasks and Metrics}
+Specify each prediction or generation task, reference standard, baseline methods, primary metrics, uncertainty estimates, and statistical analyses.
+
+\subsection{Model Development and Evaluation}
+Describe model inputs, architectures or model families, training and validation procedures, hyperparameter selection, external validation, subgroup analyses, and error analysis.
+
+\subsection{Ethics, Privacy, and Governance}
+State institutional-review-board status, consent procedures or waivers, privacy protections, data governance, and any access restrictions.
+
+\section{Results}
+
+\subsection{Dataset Characteristics}
+Report cohort and data characteristics. Use tables and figures where useful.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Example Dataset Characteristics}
+	\begin{tabular}{@{}lll@{}}
+		\toprule
+		Characteristic                & Development Set & Test Set \\
+		\midrule
+		Participants or studies       & [n]             & [n]      \\
+		Records, images, or documents & [n]             & [n]      \\
+		Primary outcome prevalence    & [n (\%)]        & [n (\%)] \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:dataset-characteristics}
+\end{table}
+
+\subsection{Benchmark Results}
+Report baseline and proposed-method results, including confidence intervals when appropriate.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Example Benchmark Results}
+	\begin{tabular}{@{}lrr@{}}
+		\toprule
+		Method          & Primary Metric & 95\% Confidence Interval \\
+		\midrule
+		Baseline 1      & [value]        & [lower, upper]           \\
+		Baseline 2      & [value]        & [lower, upper]           \\
+		Proposed method & [value]        & [lower, upper]           \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:benchmark-results}
+\end{table}
+
+\section{Discussion}
+Explain the main contribution, appropriate use cases, limitations, likely sources of bias, generalizability, and implications for clinical AI research or practice.
+
+\section{Data and Code Availability}
+State precisely what is available, where it can be accessed, licensing terms, access controls, and any application or data-use-agreement requirements.
+
+\noindent\textbf{Data availability:} [Repository, DOI, access process, or reason data cannot be shared.]\\
+\textbf{Code availability:} [Repository URL, DOI, license, commit/tag, and reproducibility instructions.]
+
+\section{Acknowledgments}
+ [Acknowledge nonauthor contributors, data providers, and participating institutions. Obtain permission where required.]
+
+\section{Funding}
+ [Identify all funding sources and grant numbers, or state: ``No external funding was received.'']
+
+\section{Disclosures}
+ [Declare relevant financial and nonfinancial relationships for every author, or state: ``The authors declare no competing interests.'']
+
+\section{Author Contributions}
+ [Use contributor roles, for example: Conceptualization, methodology, software, validation, formal analysis, investigation, data curation, writing---original draft, writing---review and editing, visualization, supervision, project administration, and funding acquisition.]
+
+\section{Writing Assistance and AI Disclosure}
+\WritingAssistance
+
+\section{Submission Metadata}
+This section is a drafting aid. Enter its contents into the corresponding Manuscript Central fields.
+
+\begin{description}[style=nextline,leftmargin=1.8in]
+	\item[Article description] \ArticleDescription
+	\item[Editorial-process option] [Yes or No: permission to compare editorial processes against AI-driven summarizers.]
+	\item[Authorship certification] All authors meet ICMJE authorship criteria, approved the manuscript, agree with submission decisions, and certify that the work is not published or under consideration elsewhere as described in the submission portal.
+\end{description}
+
+\section*{References}
+% Replace this placeholder with the journal's required reference style.
+\begin{enumerate}
+	\item [Author(s)]. [Title]. [Journal] [Year];[Volume]:[Pages].
+\end{enumerate}
+
+\clearpage
+\section*{Figure Legends}
+\textbf{Figure 1. [Title].} [Describe the figure, abbreviations, and relevant methods.]
+
+% Example figure:
+% \begin{figure}[htbp]
+% \centering
+% \includegraphics[width=\textwidth]{figure1.pdf}
+% \caption{[Figure caption.]}
+% \label{fig:example}
+% \end{figure}
+
+\end{document}

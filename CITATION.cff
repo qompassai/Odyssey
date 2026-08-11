@@ -9,7 +9,7 @@ authors:
 version: "v2026-08-10"
 date-released: "2026-08-10"
 repository-code: "https://github.com/qompassai/odyssey"
-license: "Q-CDA-1.0"
+license: "Apache-2.0"
 keywords:
   - AI
   - Education
