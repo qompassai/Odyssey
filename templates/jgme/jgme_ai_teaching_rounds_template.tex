@@ -1,0 +1,530 @@
+% #################################################################
+% JGME AI Teaching Rounds Manuscript Template
+% Modeled on:
+%   "Supervising Resident AI Use Without Losing the Learning"
+%   Journal of Graduate Medical Education, February 2026
+%
+% #################################################################
+
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\hypersetup{
+  hidelinks,
+  pdfauthor={AUTHOR NAME},
+  pdftitle={AI TEACHING ROUNDS MANUSCRIPT TITLE}
+}
+
+\doublespacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+% ------------------------------------------------------------------
+% USER VARIABLES
+% ------------------------------------------------------------------
+
+\newcommand{\ArticleTitle}{FULL AI TEACHING ROUNDS TITLE}
+\newcommand{\AuthorName}{AUTHOR NAME, DEGREE(S)}
+\newcommand{\AuthorAffiliation}{DEPARTMENT, INSTITUTION, CITY, STATE/PROVINCE, COUNTRY}
+\newcommand{\CorrespondingEmail}{EMAIL}
+\newcommand{\CaseTitle}{The Case of [SHORT, MEMORABLE CASE TITLE]}
+
+\begin{document}
+
+% ==================================================================
+% TITLE / AUTHOR
+% ==================================================================
+
+\begin{center}
+	{\Large\bfseries \ArticleTitle\par}
+
+	\vspace{0.8em}
+
+	\AuthorName
+\end{center}
+
+\vspace{1em}
+
+% ==================================================================
+% OPENING CASE
+% ==================================================================
+
+\section*{\CaseTitle}
+
+ % PURPOSE:
+ % Open with a concrete, believable GME scenario involving a resident,
+ % faculty member, program, or training environment.
+ %
+ % MODEL:
+ % The published article begins with an overnight ED case involving a
+ % second-year resident, an ambient AI scribe, polished documentation,
+ % and a gap between documentation quality and observable reasoning.
+ %
+ % WRITING TARGET:
+ % - 2-5 short paragraphs.
+ % - Use a recognizable clinical/educational tension.
+ % - End with a practical supervisory or educational question.
+ % - Avoid making the case merely decorative: it should introduce the
+ %   central problem that the rest of the article resolves.
+
+ [Describe a realistic residency/fellowship scenario.]
+
+ [Show where AI enters the trainee's work.]
+
+ [Show the educational tension: efficiency vs learning, assistance vs
+  independence, polish vs reasoning, etc.]
+
+ [End with the central question:
+  What should the attending/program do?]
+
+ % ==================================================================
+ % CONNECTION TO THE SERIES
+ % ==================================================================
+
+ % The model article explicitly connects back to the inaugural AI Teaching
+ % Rounds principles before stating the focus of the current installment.
+
+ [OPTIONAL SERIES BRIDGE.]
+
+In prior discussions of AI in graduate medical education, three principles
+are especially useful: normalize disclosure of AI use, prioritize observable
+reasoning over polished products, and begin with small, testable steps that
+can be revised as programs learn.
+
+In this installment of AI Teaching Rounds, we apply those principles to
+	[YOUR SPECIFIC PROBLEM].
+
+% ==================================================================
+% WHY THIS MATTERS NOW
+% ==================================================================
+
+\section*{Why This Matters Now}
+
+ % PURPOSE:
+ % Explain why the problem is immediate rather than hypothetical.
+ %
+ % The model article does three things:
+ % 1. Establishes that AI use is rapidly becoming routine.
+ % 2. Contrasts health-system efficiency goals with educational goals.
+ % 3. Re-examines assumptions about which clinical tasks are actually
+ %    educationally valuable.
+ %
+ % Suggested 3-part structure:
+ %
+ % Paragraph 1: adoption / urgency.
+ % Paragraph 2: educational risk or tension.
+ % Paragraph 3: what this forces programs to define explicitly.
+
+ [Describe the current state of AI adoption relevant to your topic.]
+
+ [Explain why the issue creates a GME-specific educational challenge.]
+
+ [Describe the tension between operational efficiency and development of
+  trainee knowledge, judgment, reasoning, communication, or professional
+  identity.]
+
+ [State what programs/faculty now need to decide.]
+
+% ==================================================================
+% DEFINE THE PROTECTED HUMAN WORK
+% ==================================================================
+
+\section*{What Should Remain Human-Only (for Now)}
+
+ % PURPOSE:
+ % Identify the parts of the task that trainees should perform before AI
+ % assistance because the struggle itself is educationally valuable.
+ %
+ % The model article protects:
+ % - first-pass differential diagnosis;
+ % - initial problem representation;
+ % - assessment and plan;
+ % while allowing AI as a later check or augmentation.
+ %
+ % Adapt this to your own domain.
+
+ [Identify 2-5 cognitive, communicative, procedural, reflective, or
+  professional tasks that should remain trainee-generated first.]
+
+For each protected task, explain:
+
+\begin{itemize}
+	\item what competency the task develops;
+	\item what would be lost if AI performed it first;
+	\item when AI may appropriately enter afterward;
+	\item whether the rule should vary by learner stage.
+\end{itemize}
+
+% ==================================================================
+% PRACTICAL SUPERVISION / TEACHING FRAMEWORK
+% ==================================================================
+
+\section*{Supervising AI Use in [YOUR CONTEXT]: The [FRAMEWORK-NAME] Framework}
+
+% PURPOSE:
+% Give readers something memorable and usable in real time.
+%
+% The model article introduces DEFT-AI and then explains each component
+% through concrete supervisory questions.
+%
+% If adapting an existing framework:
+% - cite it clearly;
+% - state that you are applying/adapting it;
+% - do not imply authorship of the framework.
+%
+% If proposing your own framework:
+% - make each step operational;
+% - keep the number of steps small;
+% - connect each step to the educational risk identified earlier.
+
+\subsection*{Step 1: [NAME]}
+
+[Explain the first action.]
+
+\textit{Example supervisor prompt:}
+``[QUESTION THE SUPERVISOR CAN ACTUALLY ASK.]''
+
+\subsection*{Step 2: [NAME]}
+
+[Explain how faculty should inspect inputs, evidence, assumptions, or
+context.]
+
+\textit{Example supervisor prompt:}
+``[QUESTION.]''
+
+\subsection*{Step 3: [NAME]}
+
+[Explain how the supervisor elicits the trainee's own reasoning.]
+
+\textit{Example supervisor prompt:}
+``[QUESTION.]''
+
+\subsection*{Step 4: [NAME]}
+
+[Explain verification, skepticism, checking, or adjudication.]
+
+\textit{Example supervisor prompt:}
+``[QUESTION.]''
+
+\subsection*{Step 5: [NAME]}
+
+[Explain how the supervisor gives advice about future appropriate AI use.]
+
+\textit{Example supervisor prompt:}
+``[QUESTION.]''
+
+% ==================================================================
+% BOX 1
+% ==================================================================
+
+\section*{Box 1. [FRAMEWORK NAME] in Under 2 Minutes for [TARGET USER]}
+
+\begin{description}[style=nextline,leftmargin=0pt]
+	\item[\textbf{1. [STEP NAME]}]
+	      ``[Short question or action.]''
+
+	\item[\textbf{2. [STEP NAME]}]
+	      ``[Short question or action.]''
+
+	\item[\textbf{3. [STEP NAME]}]
+	      ``[Short question or action.]''
+
+	\item[\textbf{4. [STEP NAME]}]
+	      ``[Short question or action.]''
+
+	\item[\textbf{5. [STEP NAME]}]
+	      ``[Short question or action.]''
+\end{description}
+
+% ==================================================================
+% TASK DISSECTION
+% ==================================================================
+
+\section*{Task Dissection: What Exactly Is AI Offloading, and Do We Want That?}
+
+ % PURPOSE:
+ % Move from individual supervision to program-level analysis.
+ %
+ % The model article asks:
+ % - What is this task teaching?
+ % - What exactly would AI offload?
+ % - Is that offloading helpful or harmful at this learner stage?
+ % - What new learning opportunity might AI create?
+ % - How will supervisors still see the trainee's thinking?
+
+ [Explain why real-time supervision alone is insufficient.]
+
+ [Introduce a task-by-task method for deciding whether AI use should be
+  protected, augmented, or offloaded.]
+
+% ==================================================================
+% BOX 2
+% ==================================================================
+
+\section*{Box 2. Task Dissection Framework: 5 Questions}
+
+\begin{enumerate}
+	\item What is this task teaching?
+	\item What exactly would the AI offload?
+	\item For this trainee at this stage, is that offloading helpful or harmful?
+	\item What new learning opportunity might AI create?
+	\item How will supervisors still see the trainee's thinking?
+\end{enumerate}
+
+% ==================================================================
+% APPLIED EXAMPLES
+% ==================================================================
+
+% The published article then applies the framework to three common tasks.
+% Use 2-4 examples from your own educational domain.
+
+\section*{[Task Example 1]}
+
+ [What the task teaches.]
+
+ [What AI offloads.]
+
+ [What should remain trainee-generated.]
+
+ [How AI can be used afterward.]
+
+ [What the supervisor should observe or ask.]
+
+\section*{[Task Example 2]}
+
+ [Repeat the same reasoning.]
+
+\section*{[Task Example 3]}
+
+ [Repeat the same reasoning.]
+
+% ==================================================================
+% CROSS-SPECIALTY / CROSS-PROGRAM TABLE
+% ==================================================================
+
+\section*{Table. Examples of ``Human-First'' Tasks Across Residency Programs}
+
+\begin{longtable}{p{0.20\textwidth} p{0.36\textwidth} p{0.36\textwidth}}
+	\toprule
+	\textbf{Residency / Setting}
+	 &
+	\textbf{Example ``Human-First'' Task}
+	 &
+	\textbf{How AI Might Be Used After the Resident Attempts}
+	\\
+	\midrule
+	\endfirsthead
+
+	\toprule
+	\textbf{Residency / Setting}
+	 &
+	\textbf{Example ``Human-First'' Task}
+	 &
+	\textbf{How AI Might Be Used After the Resident Attempts}
+	\\
+	\midrule
+	\endhead
+
+	[Specialty 1]
+	 &
+	[Human-first cognitive task]
+	 &
+	[Permitted AI augmentation after trainee attempt]
+	\\
+
+	[Specialty 2]
+	 &
+	[Human-first cognitive task]
+	 &
+	[Permitted AI augmentation after trainee attempt]
+	\\
+
+	[Specialty 3]
+	 &
+	[Human-first cognitive task]
+	 &
+	[Permitted AI augmentation after trainee attempt]
+	\\
+
+	[Specialty 4]
+	 &
+	[Human-first cognitive task]
+	 &
+	[Permitted AI augmentation after trainee attempt]
+	\\
+
+	\bottomrule
+\end{longtable}
+
+% ==================================================================
+% SMALL EXPERIMENTS
+% ==================================================================
+
+\section*{Box 3. Try This: Small Experiments for [YOUR TOPIC]}
+
+% The model article provides three very small, immediately actionable
+% interventions. Follow that pattern.
+
+\textbf{Experiment 1: [SHORT LABEL]}
+
+[One sentence describing the behavior.]
+
+[One sentence explaining what to observe.]
+
+\vspace{0.6em}
+
+\textbf{Experiment 2: [SHORT LABEL]}
+
+[One sentence describing the behavior.]
+
+[One sentence explaining what to observe.]
+
+\vspace{0.6em}
+
+\textbf{Experiment 3: [SHORT LABEL]}
+
+[One sentence describing the behavior.]
+
+[One sentence explaining what to observe.]
+
+% ==================================================================
+% USEFUL RESOURCES
+% ==================================================================
+
+\section*{Box 4. Useful Resources}
+
+% The published article does more than list citations: each selected source
+% has a short annotation explaining why it is practically useful.
+
+\textbf{Author AA, Author BB. Title. Journal. Year;volume(issue):pages.
+	doi:...}
+
+[1-3 sentences explaining why this resource is useful to GME educators.]
+
+\vspace{0.8em}
+
+\textbf{Organization. Guideline/resource title. URL}
+
+[1-3 sentences explaining what practical question this resource helps answer.]
+
+\vspace{0.8em}
+
+\textbf{Author AA, et al. Title. Journal. Year;volume(issue):pages.
+	doi:...}
+
+[1-3 sentences explaining its practical relevance.]
+
+% ==================================================================
+% CONCLUSION
+% ==================================================================
+
+\section*{Conclusions}
+
+ % The model conclusion is short and returns to the main tension introduced
+ % in the opening case.
+ %
+ % Recommended pattern:
+ % 1. State what does NOT need to be abandoned.
+ % 2. State what DOES need to become explicit.
+ % 3. Reaffirm trainee reasoning/human judgment.
+ % 4. End with a constructive rather than alarmist view of AI.
+
+ [2-4 concise paragraphs.]
+
+ [Return explicitly to the educational problem introduced in the opening.]
+
+ [State what faculty/programs should protect.]
+
+ [State what AI can appropriately offload or augment.]
+
+ [End with the core educational principle.]
+
+% ==================================================================
+% REFERENCES
+% ==================================================================
+
+\section*{References}
+
+% Follow JGME's numbered biomedical reference style.
+% Number references consecutively in order of first citation.
+
+\begin{enumerate}
+	\item Author AA, Author BB. Article title. \textit{Journal Name}.
+	      YEAR;VOLUME(ISSUE):PAGES. doi:DOI
+
+	\item Organization. Guideline/resource title. Accessed MONTH DAY, YEAR.
+	      \url{https://example.org}
+
+	\item Author AA, Author BB, Author CC, et al. Article title.
+	      \textit{Journal Name}. YEAR;VOLUME(ISSUE):PAGES. doi:DOI
+\end{enumerate}
+
+% ==================================================================
+% AUTHOR INFORMATION
+% ==================================================================
+
+\vspace{1em}
+
+\noindent
+\AuthorName\ is [ROLE/TITLE], \AuthorAffiliation.
+
+\vspace{0.5em}
+
+\noindent
+\textbf{Corresponding author:}
+\AuthorName,
+\AuthorAffiliation,
+\CorrespondingEmail
+
+% ==================================================================
+% WRITING CHECKLIST
+% ==================================================================
+
+\clearpage
+\section*{AI Teaching Rounds Structural Checklist}
+
+\begin{itemize}[label=$\square$]
+	\item Title states the educational problem rather than merely naming AI.
+	\item Opening case contains a real GME decision or supervisory tension.
+	\item Case ends with a question that the article subsequently answers.
+	\item ``Why This Matters Now'' establishes urgency and GME relevance.
+	\item Human-first/protected learning tasks are explicitly identified.
+	\item Article distinguishes AI augmentation from AI substitution.
+	\item Learner stage is considered where relevant.
+	\item A concise, memorable framework is provided or appropriately adapted.
+	\item Framework contains concrete questions/actions faculty can use.
+	\item At least one box converts concepts into a rapid-use tool.
+	\item Task-dissection section explains what AI actually offloads.
+	\item 2-4 applied examples demonstrate the framework.
+	\item Cross-specialty table is included if it materially helps readers.
+	\item Small, low-stakes experiments are offered.
+	\item Practical resources are annotated, not merely listed.
+	\item Privacy/PHI and institution-approved tool use are addressed if relevant.
+	\item Verification and skepticism are explicitly taught.
+	\item Human reasoning remains observable to supervisors.
+	\item Conclusion returns to the opening educational tension.
+	\item Tone is practical and non-hyperbolic.
+	\item References use numbered JGME-style citations.
+\end{itemize}
+
+\end{document}

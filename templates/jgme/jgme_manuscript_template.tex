@@ -1,0 +1,637 @@
+% #################################################################
+% JGME Manuscript + Cover Letter Template
+% Journal of Graduate Medical Education
+% Generated 2026
+%
+% This template separates:
+%   1. Cover letter
+%   2. Title page
+%   3. Manuscript
+%   4. References
+%   5. Tables/Figures/Boxes
+%   6. Supplemental material checklist
+%
+% IMPORTANT:
+% - Choose ONE manuscript category and obey its word/figure limits.
+% - JGME research submissions use structured abstracts/manuscripts.
+% - Perspectives and On Teaching do not require an abstract.
+% - The journal checklist requires double-spaced, numbered pages.
+% - References are numbered consecutively in order of first citation.
+% - Research manuscripts require study year, response-rate reporting
+%   when applicable, IRB/ethics statement, limitations, and survey
+%   supplement when applicable.
+% - AI-related submissions should clearly disclose AI use and retain
+%   human responsibility for final content.
+% #################################################################
+
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{lineno}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\hypersetup{
+  hidelinks,
+  pdfauthor={AUTHOR NAME},
+  pdftitle={MANUSCRIPT TITLE}
+}
+
+\doublespacing
+\linenumbers
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0pt}
+
+% ------------------------------------------------------------------
+% USER VARIABLES
+% ------------------------------------------------------------------
+
+\newcommand{\ManuscriptTitle}{FULL MANUSCRIPT TITLE}
+\newcommand{\ShortTitle}{SHORT RUNNING TITLE}
+\newcommand{\ManuscriptCategory}{Perspective} % Change as needed.
+\newcommand{\CorrespondingAuthor}{FULL NAME, DEGREE(S)}
+\newcommand{\CorrespondingInstitution}{INSTITUTION}
+\newcommand{\CorrespondingAddress}{BUSINESS ADDRESS}
+\newcommand{\CorrespondingPhone}{PHONE}
+\newcommand{\CorrespondingEmail}{EMAIL}
+\newcommand{\ManuscriptWordCount}{0000}
+\newcommand{\AbstractWordCount}{000}
+
+% JGME category limits:
+%
+% Original Research:
+%   Main text <= 2,500 words
+%   Qualitative research <= 3,500 words
+%   Abstract <= 250 words
+%   Tables/Figures/Boxes <= 5
+%
+% Educational Innovation:
+%   Main text <= 2,000 words
+%   Abstract <= 250 words
+%   Tables/Figures/Boxes <= 5
+%
+% Review:
+%   Main text <= 3,000 words
+%   Abstract <= 250 words
+%   Tables/Figures/Boxes <= 5
+%
+% Brief Report:
+%   Main text <= 1,200 words
+%   Abstract <= 250 words
+%   Tables/Figures/Boxes <= 2
+%
+% Perspective:
+%   Main text <= 1,200 words
+%   No abstract
+%   Tables/Figures/Boxes <= 2
+%
+% On Teaching:
+%   Main text <= 1,200 words
+%   No abstract
+%
+% To the Editor:
+%   Main text <= 500 words
+%   No abstract
+%   Tables/Figures/Boxes <= 2
+
+\begin{document}
+
+% ==================================================================
+% COVER LETTER
+% ==================================================================
+
+\begin{flushleft}
+	\today
+
+	Editor-in-Chief\\
+	Journal of Graduate Medical Education
+\end{flushleft}
+
+\vspace{1em}
+
+Dear Editor:
+
+Please consider our manuscript, ``\ManuscriptTitle,'' for publication in the
+\textit{Journal of Graduate Medical Education} as a \ManuscriptCategory.
+
+% ------------------------------------------------------------------
+% Required/strongly recommended cover-letter content
+% ------------------------------------------------------------------
+
+This manuscript addresses the following graduate medical education problem:
+[ONE TO THREE SENTENCES EXPLAINING THE GME PROBLEM, POPULATION, OR NEED].
+
+The principal contribution of this work is:
+[ONE TO THREE SENTENCES EXPLAINING WHAT IS NEW, USEFUL, OR ACTIONABLE].
+
+This manuscript is relevant to JGME readers because:
+[ONE TO THREE SENTENCES LINKING THE WORK TO RESIDENCY/FELLOWSHIP EDUCATION,
+PROGRAM LEADERSHIP, FACULTY DEVELOPMENT, ASSESSMENT, SUPERVISION, OR GME
+SCHOLARSHIP].
+
+% For AI-related manuscripts, consider retaining the next paragraph.
+% Delete if not applicable.
+This manuscript addresses artificial intelligence in graduate medical
+education. We have described where and how AI tools were used in the study,
+educational intervention, analysis, and/or manuscript preparation; all
+authors reviewed and take responsibility for the final content. Protected
+health information was not entered into unapproved consumer AI systems.
+	[MODIFY THIS LANGUAGE TO MATCH WHAT ACTUALLY OCCURRED.]
+
+% Originality / duplicate-publication statement.
+This manuscript is original, has not been published previously, and is not
+under consideration by another journal. [MODIFY IF THERE IS A PREPRINT,
+		ABSTRACT, CONFERENCE POSTER, OR RELATED PUBLICATION; DISCLOSE IT HERE.]
+
+% Authorship.
+All listed authors meet applicable authorship criteria, approved the submitted
+version, and agree to be accountable for the work.
+
+	% Ethics.
+	[SELECT/EDIT ONE:]
+The study received approval from [IRB/ETHICS BODY], protocol [NUMBER].
+OR
+The study was determined exempt by [IRB/ETHICS BODY], determination [NUMBER].
+OR
+This manuscript does not report human-subjects research requiring IRB review.
+
+% Conflicts/funding.
+Conflicts of interest: [NONE / DESCRIBE].
+Funding/support: [NONE / DESCRIBE].
+
+% Optional word-limit explanation.
+% JGME has specifically noted that an over-limit manuscript should explain
+% the reason in the cover letter.
+[IF THE MANUSCRIPT EXCEEDS THE CATEGORY WORD LIMIT, EXPLAIN AND JUSTIFY THE
+EXCESS HERE. OTHERWISE DELETE THIS PARAGRAPH.]
+
+% Optional AI Teaching Rounds note.
+[OPTIONAL: We believe this manuscript may be relevant to JGME's AI Teaching
+Rounds conversation because ... . We understand that JGME may classify the
+submission under its standard article categories.]
+
+Thank you for considering this manuscript.
+
+Sincerely,
+
+\CorrespondingAuthor\\
+\CorrespondingInstitution\\
+\CorrespondingAddress\\
+\CorrespondingPhone\\
+\CorrespondingEmail
+
+\clearpage
+
+% ==================================================================
+% TITLE PAGE
+% ==================================================================
+
+\begin{center}
+	{\Large\bfseries \ManuscriptTitle\par}
+
+	\vspace{1em}
+
+	\textbf{Manuscript category:} \ManuscriptCategory
+
+	\vspace{1em}
+
+	% List every author, degree, affiliation, and role.
+	AUTHOR 1, DEGREE(S)$^{1}$\\
+	Role: [eg, resident, fellow, program director, associate professor]\\[0.5em]
+
+	AUTHOR 2, DEGREE(S)$^{2}$\\
+	Role: [ROLE]\\[0.5em]
+
+	AUTHOR 3, DEGREE(S)$^{1,3}$\\
+	Role: [ROLE]
+\end{center}
+
+\vspace{1em}
+
+\textbf{Affiliations}
+
+$^{1}$ Department/Program, Institution, City, State/Province, Country
+
+$^{2}$ Department/Program, Institution, City, State/Province, Country
+
+$^{3}$ Department/Program, Institution, City, State/Province, Country
+
+\vspace{1em}
+
+\textbf{Corresponding author}
+
+\CorrespondingAuthor\\
+\CorrespondingInstitution\\
+\CorrespondingAddress\\
+Phone: \CorrespondingPhone\\
+Email: \CorrespondingEmail
+
+\vspace{1em}
+
+\textbf{Word counts}
+
+Main manuscript: \ManuscriptWordCount\ words
+
+Abstract: \AbstractWordCount\ words
+% For Perspective, On Teaching, and To the Editor use:
+% Abstract: Not applicable
+
+\vspace{1em}
+
+\textbf{Abbreviations}
+
+AI, artificial intelligence; GME, graduate medical education; [ADD OTHERS].
+
+\vspace{1em}
+
+\textbf{Funding/support}
+
+[None / funding source, grant number, sponsor role.]
+
+\vspace{1em}
+
+\textbf{Conflicts of interest}
+
+[None / describe.]
+
+\vspace{1em}
+
+\textbf{Prior presentation}
+
+[None / meeting name, location, date.]
+
+\vspace{1em}
+
+\textbf{Data availability}
+
+[Describe availability, repository, restrictions, or “Not applicable.”]
+
+\vspace{1em}
+
+\textbf{AI disclosure}
+
+[If applicable: identify the AI system/tool, model/version when known,
+	date/access context where relevant, what task it performed, what human review
+	occurred, and confirm that authors remain responsible for final content.
+	Delete if no AI was used and journal policy does not require a negative
+	statement.]
+
+\clearpage
+
+% ==================================================================
+% ABSTRACT
+% ==================================================================
+
+% DELETE THE ENTIRE ABSTRACT SECTION FOR:
+%   Perspective
+%   On Teaching
+%   To the Editor
+%
+% USE A STRUCTURED ABSTRACT FOR:
+%   Original Research
+%   Educational Innovation
+%   Brief Report
+%
+% JGME limit for these categories: <=250 words.
+
+\section*{Abstract}
+
+\textbf{Background:}
+[What is already known? What GME problem or gap motivates the work?]
+
+\textbf{Objective:}
+[State the primary objective/question explicitly.]
+
+\textbf{Methods:}
+[Design, setting, participants, intervention/exposure, measures, analysis.
+	INCLUDE THE YEAR(S) THE STUDY WAS CONDUCTED.]
+
+\textbf{Results:}
+[Primary findings with numerical data where appropriate. IF RESPONSE RATE IS
+	APPLICABLE, INCLUDE TOTAL POSSIBLE N, ACTUAL N, AND CALCULATED PERCENTAGE.]
+
+\textbf{Conclusions:}
+[Answer the objective without overstating findings.]
+
+\clearpage
+
+% ==================================================================
+% MAIN MANUSCRIPT: RESEARCH / EDUCATIONAL INNOVATION / BRIEF REPORT
+% ==================================================================
+%
+% For research-style submissions use the following sections.
+% For Perspective/On Teaching, delete this structure and use the
+% alternative narrative structure below.
+
+\section{Introduction}
+
+ % Recommended logic:
+ % 1. What is known?
+ % 2. What remains unknown/problematic?
+ % 3. Why does the gap matter to GME?
+ % 4. What did this study/intervention aim to determine?
+
+ [INTRODUCTION TEXT.]
+
+\section{Methods}
+
+\subsection{Study Design and Setting}
+
+[Design, institution/program, specialty, geographic context, dates/year.]
+
+\subsection{Participants}
+
+[Eligibility, recruitment, sampling, number eligible, number participating.]
+
+\subsection{Intervention or Exposure}
+
+[Describe sufficiently for replication.]
+
+% AI-specific optional subsection:
+\subsection{Artificial Intelligence System and Workflow}
+
+[If applicable: tool/model/provider, version or date, institutional approval,
+	input/output workflow, prompts/protocol, human verification, PHI handling,
+	access conditions, and reproducibility considerations.]
+
+\subsection{Outcomes and Measures}
+
+[Primary/secondary outcomes, instruments, validity evidence, operational
+	definitions.]
+
+\subsection{Analysis}
+
+[Statistical and/or qualitative analysis; software and version where relevant.]
+
+\subsection{Ethics}
+
+% JGME requires the IRB/ethics approval or exemption statement at the END
+% of the Methods section for research manuscripts.
+[Institutional review board / ethical review approval, exemption, or other
+	determination, including institution and identifier when applicable.]
+
+\section{Results}
+
+ % If response rate applies, report:
+ % total possible participants, actual participants, calculated percentage.
+
+ [RESULTS TEXT.]
+
+\section{Discussion}
+
+\subsection{Principal Findings}
+
+[Interpret the findings; do not simply repeat Results.]
+
+\subsection{Relationship to Prior Literature}
+
+[Compare/contrast with existing GME literature.]
+
+\subsection{Implications for Graduate Medical Education}
+
+[What should educators/programs/researchers do differently?]
+
+\subsection{Limitations}
+
+% JGME explicitly requires a limitations statement for research submissions.
+[State limitations clearly and proportionately.]
+
+\section{Conclusions}
+
+ [Concise answer to the study objective supported by the data.]
+
+% ==================================================================
+% ALTERNATIVE NARRATIVE STRUCTURE:
+% PERSPECTIVE / AI TEACHING-ROUNDS-STYLE ARTICLE
+% ==================================================================
+%
+% Delete the research sections above and use something like this for a
+% Perspective. JGME Perspectives: <=1,200 words; no abstract; <=2
+% tables/figures/boxes.
+%
+% \section{The Problem}
+% [Concrete GME problem/case.]
+%
+% \section{Why It Matters Now}
+% [Evidence and GME context.]
+%
+% \section{Principles}
+% [2--4 practical principles.]
+%
+% \section{Practical Approach}
+% [Actionable workflow.]
+%
+% \section{Risks and Guardrails}
+% [Privacy, bias, supervision, deskilling, accountability, etc.]
+%
+% \section{Try This}
+% [Small intervention readers can implement immediately.]
+%
+% \section{Next Steps}
+% [What programs/researchers should evaluate next.]
+
+% ==================================================================
+% OPTIONAL PRACTICE BOX
+% ==================================================================
+
+\section*{Box 1. Practical Implementation Checklist}
+
+\begin{itemize}[leftmargin=*]
+	\item Define the educational problem before choosing an AI/tool solution.
+	\item Establish what uses require disclosure.
+	\item Identify tasks that must remain under direct human judgment.
+	\item Use institution-approved systems for protected/sensitive information.
+	\item Require human verification of generated output.
+	\item Monitor effects on trainee reasoning and independent skill development.
+	\item Evaluate equity of access to required tools.
+	\item Start with a small pilot, measure outcomes, revise, then scale.
+\end{itemize}
+
+% ==================================================================
+% REFERENCES
+% ==================================================================
+
+\section*{References}
+
+% JGME requires references numbered consecutively in order of first
+% appearance in text AND graphics.
+%
+% Use the journal's biomedical/NLM-like format.
+%
+% Example:
+% 1. Author AA, Author BB, Author CC, et al. Article title.
+%    J Grad Med Educ. 2026;18(1):1-6. doi:xx.xxxx/xxxxx
+
+\begin{enumerate}
+	\item Author AA, Author BB. Article title. \textit{Journal Name}.
+	      YEAR;VOLUME(ISSUE):PAGES. doi:DOI
+	\item Author AA, Author BB, Author CC, et al. Article title.
+	      \textit{Journal Name}. YEAR;VOLUME(ISSUE):PAGES. doi:DOI
+\end{enumerate}
+
+% ==================================================================
+% TABLES / FIGURES / BOXES
+% ==================================================================
+
+\clearpage
+\section*{Tables, Figures, and Boxes}
+
+% Every table, figure, box, and supplement must be cited in the manuscript.
+% JGME checklist:
+% - legends required;
+% - footnotes use superscripted letters;
+% - figures provided in original format;
+% - grayscale;
+% - minimum 200 dpi.
+
+\begin{table}[ht]
+	\centering
+	\caption{Example Table Title}
+	\begin{tabular}{lll}
+		\toprule
+		Characteristic & Group 1 & Group 2 \\
+		\midrule
+		Example        & 0       & 0       \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+% Example figure placeholder:
+%
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[width=0.8\textwidth]{figure1.pdf}
+% \caption{Figure title and complete legend.}
+% \end{figure}
+
+% ==================================================================
+% SUPPLEMENTAL MATERIAL
+% ==================================================================
+
+\clearpage
+\section*{Supplemental Material}
+
+ % If a survey was used, JGME requires it as supplemental material.
+ %
+ % Supplemental files:
+ % - Appendix 1: Survey instrument
+ % - Appendix 2: Interview guide
+ % - Appendix 3: Intervention materials
+ % - Appendix 4: Prompt/protocol library for AI intervention
+ % - Appendix 5: Analytic code or codebook
+ %
+ % Cite each supplemental item in the main text.
+
+ [LIST AND DESCRIBE SUPPLEMENTAL MATERIAL.]
+
+% ==================================================================
+% FINAL PRE-SUBMISSION CHECKLIST
+% ==================================================================
+
+\clearpage
+\section*{JGME Pre-Submission Checklist}
+
+\subsection*{Category and Limits}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item Correct JGME article category selected.
+	\item Main-text word count is within the category limit.
+	\item Abstract word count is within the category limit.
+	\item Number of tables/figures/boxes is within the category limit.
+	\item Any justified word-limit excess is explained in the cover letter.
+\end{itemize}
+
+\subsection*{Title Page}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item Every author's degree(s) are listed.
+	\item Every author's affiliation and role are listed.
+	\item Corresponding author is clearly identified.
+	\item Business address is included.
+	\item Phone number is included.
+	\item Preferred email is included.
+	\item Manuscript word count is included.
+	\item Abstract word count is included when applicable.
+\end{itemize}
+
+\subsection*{Manuscript Formatting}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item Pages are double-spaced.
+	\item Pages are numbered.
+	\item Abbreviations are defined and a list is supplied when used.
+	\item References are numbered in order of first citation.
+	\item Reference numbering is consistent in text and graphics.
+	\item Every table, figure, box, and supplement is cited in the text.
+	\item Tables/figures/boxes have complete legends.
+	\item Footnotes use superscripted letters.
+\end{itemize}
+
+\subsection*{Research Manuscripts}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item Structured abstract uses Background, Objective, Methods, Results,
+	      Conclusions.
+	\item Main manuscript uses Introduction, Methods, Results, Discussion,
+	      Conclusions.
+	\item Study year appears in abstract Methods.
+	\item Study year appears in manuscript Methods.
+	\item Response rate, when applicable, includes eligible N, actual N, and
+	      percentage in both abstract and manuscript Results.
+	\item IRB/ethics approval or exemption appears at the end of Methods.
+	\item Discussion contains an explicit limitations section/statement.
+	\item Survey instrument is supplied as supplemental material when used.
+\end{itemize}
+
+\subsection*{Figures}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item Figure files are supplied in original format.
+	\item Figures are grayscale.
+	\item Figures are at least 200 dpi.
+\end{itemize}
+
+\subsection*{AI-Specific Review}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item AI tool/model and role are described when relevant.
+	\item Human review/verification is described.
+	\item Authors retain responsibility for final content.
+	\item AI use in manuscript preparation is disclosed when applicable.
+	\item PHI/privacy handling is described when relevant.
+	\item Institutional approval/access restrictions are described when relevant.
+	\item Bias/equity implications are considered when relevant.
+	\item Effects on learner reasoning/skill development are considered.
+	\item AI-detection software is not treated as definitive proof of AI use.
+\end{itemize}
+
+\subsection*{Cover Letter}
+
+\begin{itemize}[label=$\square$, leftmargin=*]
+	\item Manuscript title and article category are named.
+	\item Relevance to GME/JGME readership is explained.
+	\item Novel contribution is summarized.
+	\item Originality/concurrent-submission status is disclosed.
+	\item Authorship/accountability is confirmed.
+	\item Ethics status is stated.
+	\item Funding/conflicts are stated.
+	\item Related abstracts/preprints/presentations are disclosed.
+	\item Any word-limit exception is explained.
+	\item AI Teaching Rounds relevance is mentioned only if appropriate.
+\end{itemize}
+
+\end{document}
