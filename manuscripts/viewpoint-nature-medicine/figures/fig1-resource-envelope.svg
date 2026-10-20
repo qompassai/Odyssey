@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="118mm" viewBox="0 0 180 118" font-family="Arial, Helvetica, sans-serif" role="img" aria-labelledby="fig-title fig-desc">
+<title id="fig-title">Figure 1. The resource envelope, seat by seat</title>
+<desc id="fig-desc">Panel a compares file sizes drawn to scale: one large model at 18.56 GB against a three-seat team totalling about 4.2 GB. Panel b lists each seat with its measured result and CPU-only peak memory. Panel c shows the authority rule: models propose, a deterministic record checks, a clinician decides.</desc>
+<defs><marker id="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#000000"/></marker></defs>
+<rect x="0" y="0" width="180" height="118" fill="#FFFFFF"/>
+<text x="4.00" y="7.00" font-size="4.00" font-weight="bold" fill="#000000" text-anchor="start">a</text>
+<text x="10.00" y="7.00" font-size="3.00" font-weight="bold" fill="#000000" text-anchor="start">Files on disk, drawn to scale (1 GB = 7 mm)</text>
+<text x="4.00" y="16.50" font-size="2.60" font-weight="bold" fill="#000000" text-anchor="start">One large model</text>
+<rect x="42.00" y="12.00" width="129.92" height="7.00" fill="#D55E00" stroke="none" stroke-width="0.3"/>
+<text x="44.00" y="16.60" font-size="2.60" font-weight="bold" fill="#FFFFFF" text-anchor="start">Large coding model, 18.56 GB file</text>
+<text x="42.00" y="22.50" font-size="2.30" font-weight="normal" fill="#555555" text-anchor="start">20/24 points on the non-clinical battery; served on a workstation GPU; CPU-only memory not measured</text>
+<text x="4.00" y="31.50" font-size="2.60" font-weight="bold" fill="#000000" text-anchor="start">Three-seat team</text>
+<rect x="42.00" y="27.00" width="14.70" height="7.00" fill="#0072B2" stroke="none" stroke-width="0.3"/>
+<rect x="56.70" y="27.00" width="8.12" height="7.00" fill="#E69F00" stroke="none" stroke-width="0.3"/>
+<rect x="64.82" y="27.00" width="6.72" height="7.00" fill="#009E73" stroke="none" stroke-width="0.3"/>
+<text x="73.54" y="31.60" font-size="2.60" font-weight="bold" fill="#000000" text-anchor="start">≈4.2 GB, 23% of the large file</text>
+<rect x="118.00" y="26.50" width="58.00" height="8.00" fill="none" stroke="#999999" stroke-width="0.3" stroke-dasharray="1.2,0.8"/>
+<text x="147.00" y="30.00" font-size="2.30" font-weight="normal" fill="#555555" text-anchor="middle">Team production vs large model:</text>
+<text x="147.00" y="33.40" font-size="2.60" font-weight="bold" fill="#555555" text-anchor="middle">RESULTS PENDING</text>
+<text x="4.00" y="46.00" font-size="4.00" font-weight="bold" fill="#000000" text-anchor="start">b</text>
+<text x="10.00" y="46.00" font-size="3.00" font-weight="bold" fill="#000000" text-anchor="start">Seats filled by measured production per unit cost</text>
+<rect x="4.00" y="50.00" width="56.00" height="26.00" fill="#FFFFFF" stroke="#0072B2" stroke-width="0.3"/>
+<rect x="4.00" y="50.00" width="56.00" height="4.50" fill="#0072B2" stroke="none" stroke-width="0.3"/>
+<text x="6.00" y="53.40" font-size="2.60" font-weight="bold" fill="#FFFFFF" text-anchor="start">Digest seat</text>
+<text x="6.00" y="59.50" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">Qwen2.5-Coder-3B + low-rank adapter (30 MB)</text>
+<text x="6.00" y="63.90" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">2.10 GB file</text>
+<text x="6.00" y="68.30" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">Clean held-out digests 18/20 (17/20 served)</text>
+<text x="6.00" y="72.70" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">CPU-only peak memory: not measured</text>
+<rect x="63.00" y="50.00" width="56.00" height="26.00" fill="#FFFFFF" stroke="#E69F00" stroke-width="0.3"/>
+<rect x="63.00" y="50.00" width="56.00" height="4.50" fill="#E69F00" stroke="none" stroke-width="0.3"/>
+<text x="65.00" y="53.40" font-size="2.60" font-weight="bold" fill="#FFFFFF" text-anchor="start">Triage seat</text>
+<text x="65.00" y="59.50" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">Bonsai-8B Q1_0 (1-bit)</text>
+<text x="65.00" y="63.90" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">1.16 GB file</text>
+<text x="65.00" y="68.30" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">Triage labels 9/12</text>
+<text x="65.00" y="72.70" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">CPU-only peak memory 6.51 GiB</text>
+<rect x="122.00" y="50.00" width="56.00" height="26.00" fill="#FFFFFF" stroke="#009E73" stroke-width="0.3"/>
+<rect x="122.00" y="50.00" width="56.00" height="4.50" fill="#009E73" stroke="none" stroke-width="0.3"/>
+<text x="124.00" y="53.40" font-size="2.60" font-weight="bold" fill="#FFFFFF" text-anchor="start">Tool seat</text>
+<text x="124.00" y="59.50" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">LFM2.5-1.2B</text>
+<text x="124.00" y="63.90" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">0.96 GB file</text>
+<text x="124.00" y="68.30" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">Parsed tool calls 6/6</text>
+<text x="124.00" y="72.70" font-size="2.40" font-weight="normal" fill="#000000" text-anchor="start">CPU-only peak memory 1.39 GiB</text>
+<text x="4.00" y="87.00" font-size="4.00" font-weight="bold" fill="#000000" text-anchor="start">c</text>
+<text x="10.00" y="87.00" font-size="3.00" font-weight="bold" fill="#000000" text-anchor="start">Authority stays where it can be checked</text>
+<rect x="4.00" y="91.00" width="46.00" height="10.00" fill="#F2F2F2" stroke="#000000" stroke-width="0.3"/>
+<text x="27.00" y="97.20" font-size="2.80" font-weight="bold" fill="#000000" text-anchor="middle">Models propose</text>
+<line x1="51.50" y1="96" x2="61.50" y2="96" stroke="#000000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<rect x="63.00" y="91.00" width="46.00" height="10.00" fill="#F2F2F2" stroke="#000000" stroke-width="0.3"/>
+<text x="86.00" y="97.20" font-size="2.80" font-weight="bold" fill="#000000" text-anchor="middle">Deterministic record checks</text>
+<line x1="110.50" y1="96" x2="120.50" y2="96" stroke="#000000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<rect x="122.00" y="91.00" width="46.00" height="10.00" fill="#F2F2F2" stroke="#000000" stroke-width="0.3"/>
+<text x="145.00" y="97.20" font-size="2.80" font-weight="bold" fill="#000000" text-anchor="middle">Clinician decides</text>
+<text x="4.00" y="108.00" font-size="2.40" font-weight="normal" fill="#555555" text-anchor="start">If the record or the serving endpoint fails, the model layer fails closed. Models never commit an action.</text>
+<text x="4.00" y="113.50" font-size="2.40" font-weight="normal" fill="#555555" text-anchor="start">All measurements: non-clinical coordination battery, one workstation, 17 October 2026. Clinical battery: RESULTS PENDING.</text>
+</svg>

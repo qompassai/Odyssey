@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    }
+  ],
+  "journal_name": "JAMIA",
+  "profile_key": "jamia",
+  "slug": "kintsugi-clinical-battery",
+  "stage": "planned",
+  "title": "Collaborative Small Language Models for Clinical Text Tasks Under Resource Constraints: A Comparative Evaluation Against a Single Large Model",
+  "updated": "2026-10-19"
+}

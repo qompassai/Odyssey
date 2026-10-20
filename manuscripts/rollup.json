@@ -1,0 +1,83 @@
+{
+  "generated": "2026-10-19",
+  "manuscripts": [
+    {
+      "journal_name": "Medical Teacher",
+      "slug": "ai-tutors-med-ed",
+      "stage": "planned",
+      "title": "Twelve Tips for Using Local Small Language Models as Study Companions in Medical Training",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "Bulletin of the World Health Organization",
+      "slug": "ai-without-infrastructure",
+      "stage": "planned",
+      "title": "Artificial Intelligence Without Infrastructure: A Deployment Model for Low-Resource Health Facilities",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "Value in Health",
+      "slug": "compute-value-accounting",
+      "stage": "planned",
+      "title": "Production per Dollar: A Cost-Effectiveness Analysis of Small-Model Teams Versus Large Models for Clinical Text Processing",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "JAMIA",
+      "slug": "kintsugi-clinical-battery",
+      "stage": "planned",
+      "title": "Collaborative Small Language Models for Clinical Text Tasks Under Resource Constraints: A Comparative Evaluation Against a Single Large Model",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "Artificial Intelligence in Medicine",
+      "slug": "kintsugi-protocol",
+      "stage": "planned",
+      "title": "A Goal-State Protocol with Verified Uptake for Clinical AI Pipelines: Design and Validation",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "International Journal of Medical Informatics",
+      "slug": "local-ai-implementation",
+      "stage": "planned",
+      "title": "Implementing Local-First Artificial Intelligence in a Resource-Limited Institution: Workflow, Governance, and Lessons Learned",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "Clinical Orthopaedics and Related Research",
+      "slug": "ortho-evidence-synthesis",
+      "stage": "planned",
+      "title": "Local Small-Model Teams for Orthopaedic Evidence Synthesis: Deduplication, Screening, and Structured Extraction Without Cloud Infrastructure",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "NEJM AI",
+      "slug": "primum-protocol",
+      "stage": "planned",
+      "title": "A Time-Out at Every Handoff: The PRIMUM Protocol for Harm Avoidance in Multi-Agent Artificial Intelligence Workflows",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "Journal of Graduate Medical Education",
+      "slug": "resident-local-models",
+      "stage": "planned",
+      "title": "Local Small Language Models as Study and Feedback Tools in Residency Training: A Feasibility Report",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "BMJ Quality & Safety",
+      "slug": "small-model-redteam",
+      "stage": "planned",
+      "title": "Adversarial Evaluation of Small Clinical Language Models: Failure Classes and Team-Based Mitigations",
+      "updated": "2026-10-19"
+    },
+    {
+      "journal_name": "Nature Medicine",
+      "slug": "viewpoint-nature-medicine",
+      "stage": "drafting",
+      "title": "Small Is Beautiful: Capable AI for Hospitals That Will Never Have a GPU Farm",
+      "updated": "2026-10-19"
+    }
+  ],
+  "source": "odyssey manuscripts rollup"
+}

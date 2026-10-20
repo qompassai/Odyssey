@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "First draft imported from Azoth staging (manuscript.md 1,616 words + Figure 1 schematic); at Pax's gate \u2014 import is filing, not gate passage"
+    }
+  ],
+  "journal_name": "Nature Medicine",
+  "profile_key": "nature_medicine",
+  "slug": "viewpoint-nature-medicine",
+  "stage": "drafting",
+  "title": "Small Is Beautiful: Capable AI for Hospitals That Will Never Have a GPU Farm",
+  "updated": "2026-10-19"
+}

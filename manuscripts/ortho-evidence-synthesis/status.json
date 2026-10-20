@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    }
+  ],
+  "journal_name": "Clinical Orthopaedics and Related Research",
+  "profile_key": "corr",
+  "slug": "ortho-evidence-synthesis",
+  "stage": "planned",
+  "title": "Local Small-Model Teams for Orthopaedic Evidence Synthesis: Deduplication, Screening, and Structured Extraction Without Cloud Infrastructure",
+  "updated": "2026-10-19"
+}

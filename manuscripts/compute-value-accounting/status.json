@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    }
+  ],
+  "journal_name": "Value in Health",
+  "profile_key": "value_in_health",
+  "slug": "compute-value-accounting",
+  "stage": "planned",
+  "title": "Production per Dollar: A Cost-Effectiveness Analysis of Small-Model Teams Versus Large Models for Clinical Text Processing",
+  "updated": "2026-10-19"
+}

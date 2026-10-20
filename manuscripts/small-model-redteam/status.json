@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    }
+  ],
+  "journal_name": "BMJ Quality & Safety",
+  "profile_key": "bmj_quality_safety",
+  "slug": "small-model-redteam",
+  "stage": "planned",
+  "title": "Adversarial Evaluation of Small Clinical Language Models: Failure Classes and Team-Based Mitigations",
+  "updated": "2026-10-19"
+}

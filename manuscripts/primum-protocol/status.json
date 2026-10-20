@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    }
+  ],
+  "journal_name": "NEJM AI",
+  "profile_key": "nejm_ai",
+  "slug": "primum-protocol",
+  "stage": "planned",
+  "title": "A Time-Out at Every Handoff: The PRIMUM Protocol for Harm Avoidance in Multi-Agent Artificial Intelligence Workflows",
+  "updated": "2026-10-19"
+}

@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "date": "2026-10-19",
+      "event": "Scaffolded from the approved slate seed"
+    }
+  ],
+  "journal_name": "Artificial Intelligence in Medicine",
+  "profile_key": "artificial_intelligence_in_medicine",
+  "slug": "kintsugi-protocol",
+  "stage": "planned",
+  "title": "A Goal-State Protocol with Verified Uptake for Clinical AI Pipelines: Design and Validation",
+  "updated": "2026-10-19"
+}
