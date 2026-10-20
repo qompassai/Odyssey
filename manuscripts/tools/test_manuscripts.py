@@ -13,6 +13,11 @@ Coverage map (validation + adversarial, roughly half and half):
     two runs are byte-identical; a malformed status.json anywhere in
     the tree aborts the rollup and writes no output (fail loudly,
     never silently skip); an empty root is refused.
+  * tracker: the generated Markdown visualizes all 11 manuscripts,
+    stage counts, the pipeline, and lifecycle progress in a
+    deterministic order; malformed input writes nothing; punctuation
+    in titles and journal names cannot break the Markdown table;
+    withdrawn manuscripts do not receive a lifecycle percentage.
   * scaffold: creates the layout with stage=planned and never clobbers
     an existing status.json on re-run; an unknown slug is refused.
   * check/package gate: this CLI slice deliberately ships no check or
@@ -243,6 +248,66 @@ class RollupTests(TempDirCase):
     def test_rollup_empty_root_refused(self):
         result = run_cli("rollup", "--root", str(self.tmp), "--out", str(self.tmp / "r.json"))
         self.assertEqual(result.returncode, 1)
+
+
+class TrackerTests(TempDirCase):
+    def test_tracker_real_tree_visualizes_all_manuscripts(self):
+        out = self.tmp / "TRACKER.md"
+        result = run_cli("tracker", "--root", str(STAGE_ROOT), "--out", str(out))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        text = out.read_text(encoding="utf-8")
+        self.assertIn("# Odyssey Manuscript Tracker", text)
+        self.assertIn("**Data as of:** 2026-10-19", text)
+        self.assertIn("**Manuscripts:** 11", text)
+        self.assertIn("```mermaid", text)
+        self.assertIn('S0["Planned · 10"]', text)
+        self.assertIn('S1["Drafting · 1"]', text)
+        for seed in json.loads(SEEDS_PATH.read_text(encoding="utf-8")).values():
+            self.assertIn(seed["title"], text)
+            self.assertIn(seed["journal_name"], text)
+        self.assertLess(
+            text.index("viewpoint-nature-medicine"),
+            text.index("ai-tutors-med-ed"),
+        )
+
+    def test_tracker_default_output_and_determinism(self):
+        self.write_status(self.tmp, "pilot-x", valid_status())
+        first = run_cli("tracker", "--root", str(self.tmp))
+        self.assertEqual(first.returncode, 0, first.stderr)
+        out = self.tmp / "TRACKER.md"
+        first_bytes = out.read_bytes()
+        second = run_cli("tracker", "--root", str(self.tmp))
+        self.assertEqual(second.returncode, 0, second.stderr)
+        self.assertEqual(out.read_bytes(), first_bytes)
+
+    def test_tracker_fails_closed_on_malformed_status(self):
+        self.write_status(self.tmp, "good-one", valid_status(slug="good-one"))
+        self.write_status(self.tmp, "bad-one", valid_status(slug="bad-one", stage="bogus"))
+        out = self.tmp / "TRACKER.md"
+        result = run_cli("tracker", "--root", str(self.tmp), "--out", str(out))
+        self.assertEqual(result.returncode, 1)
+        self.assertFalse(out.exists())
+
+    def test_tracker_empty_root_refused(self):
+        out = self.tmp / "TRACKER.md"
+        result = run_cli("tracker", "--root", str(self.tmp), "--out", str(out))
+        self.assertEqual(result.returncode, 1)
+        self.assertFalse(out.exists())
+
+    def test_tracker_escapes_table_breaking_text(self):
+        status = valid_status(
+            title="A | B [Draft]",
+            journal_name="Journal | One",
+        )
+        text = ms.render_tracker([status])
+        self.assertIn("A \\| B \\[Draft\\]", text)
+        self.assertIn("Journal \\| One", text)
+
+    def test_tracker_withdrawn_has_no_lifecycle_percentage(self):
+        text = ms.render_tracker([valid_status(stage="withdrawn")])
+        self.assertIn("⛔ Withdrawn", text)
+        self.assertIn("| — |", text)
+        self.assertNotIn("100%", text.split("## All manuscripts", 1)[1])
 
 
 class CheckPackageGateTests(TempDirCase):

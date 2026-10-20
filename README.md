@@ -24,6 +24,14 @@
 </p>
 
 
+## Manuscript Program
+
+[Open the visual manuscript tracker](./manuscripts/TRACKER.md) for the current
+stage, target journal, and lifecycle position of all 11 Odyssey manuscripts.
+The machine-readable source data remains in
+[`manuscripts/rollup.json`](./manuscripts/rollup.json), generated from each
+manuscript's `status.json`.
+
 <details id="Contact">
   <summary><strong>Contact Qompass AI</strong></summary>
 
